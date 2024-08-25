@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{/*Variables CSS*/
+    --negro:#000000;
+    --blanco:#F6F6F6;
+    --celeste:#22D4FD;
+    --azul:#192cd5;
+
+    --Montserrat: "Montserrat", sans-serif;
+    --Krona: "Krona One", sans-serif;
+}
+/*16px = 1rem*/
+* {
+    padding: 0; /* Elimina todo el padding (relleno interno) de todos los elementos de la página */
+    margin:0; /* Elimina todo el margen (espacio externo) de todos los elementos de la página */
+}
+
+body{
+     /* height: 100vh; Establece la altura del cuerpo de la página al 100% de la altura de la ventana del navegador (viewport height) */
+    box-sizing: border-box; /* Asegura que el padding y el borde se incluyan en el ancho y alto del elemento, evitando que se desborde */
+    background-color: var(--negro); /* Define el color de fondo del cuerpo de la página como negro (#000000) */
+    color: var(--blanco); /* Define el color del texto dentro del cuerpo de la página como un tono claro (#F6F6F6), que es casi blanco */
+}
+.header{
+    padding: 2% 0% 0% 10%;
+}
+.header_menu {
+    display: flex; /* Aplica un diseño flexbox al contenedor, permitiendo que los elementos hijos se dispongan en una fila o columna flexibles. */
+    gap: 80px; /* Establece un espacio de 80 píxeles entre cada elemento hijo dentro del contenedor flexbox. */
+}
+.header_menu_link {
+    font-family: var(--Montserrat); /* Define la fuente tipográfica de los enlaces en el encabezado, usando la fuente "Montserrat". Si no está disponible, se usará la fuente por defecto sans-serif. */
+    font-size: 1.5rem; /* Establece el tamaño de la fuente en 24 píxeles para los enlaces en el encabezado. */
+    font-weight: 400; /* Define el grosor de la fuente. Un valor de 400 es el peso normal o regular de la fuente. */
+    color: var(--celeste); /* Establece el color del texto de los enlaces en un tono azul (#22D4FD). */
+    text-decoration: none; /* Elimina cualquier subrayado u otro tipo de decoración del texto en los enlaces. */
+}
+
+.presentacion {
+    padding: 4% 10%;
+    display: flex; /* Establece un contenedor flexible (flexbox) para organizar los elementos dentro de .presentacion */
+    align-items: center; /* Alinea los elementos hijos verticalmente en el centro del contenedor */
+    /* margin: 10%; Aplica un margen del 10% alrededor del contenedor, creando espacio externo en todas las direcciones */
+    justify-content: space-between; /* Distribuye los elementos hijos horizontalmente con el máximo espacio posible entre ellos */
+    gap: 82px;
+}
+.presentacion_contenido {
+    width: 50%; /* Establece el ancho fijo del contenedor .presentacion_contenido en 615 píxeles. Esto significa que el contenido dentro de este contenedor ocupará exactamente este ancho. */
+    display: flex; /* Aplica un diseño flexbox al contenedor, lo que permite que los elementos hijos se alineen de manera flexible dentro del contenedor. */
+    flex-direction: column; /* Organiza los elementos hijos del contenedor en una columna, es decir, uno debajo del otro. */
+    gap: 40px; /* Establece un espacio de 40 píxeles entre cada uno de los elementos hijos dentro del contenedor. */
+}
+.presentacion_contenido_titulo{
+    font-size: 2.25rem; /* Define el tamaño de fuente para el texto dentro de .presentacion_contenido_titulo en 36 píxeles */
+    font-family: var(--Krona); /* Aplica la fuente "Krona One" al texto. Si no está disponible, se usará una fuente sans-serif por defecto */
+}
+.titulo-destaque {
+    color: var(--celeste); ;
+}
+.presentacion_contenido_texto{
+    font-size: 1.5rem; /* Define el tamaño de fuente para el texto dentro de .presentacion_contenido_titulo en 24 píxeles */
+    font-family: var(--Montserrat); /* Aplica la fuente "Montserrat" al texto. Si no está disponible, se usará una fuente sans-serif por defecto */
+}
+.presentacion_enlaces {
+    display: flex; /* Aplica el modelo de caja flexible (Flexbox) al contenedor, permitiendo una disposición flexible de sus elementos hijos. */
+    justify-content: space-between; /* Distribuye los elementos hijos (enlaces) dentro del contenedor con un espacio uniforme entre ellos. */
+    flex-direction: column; /* Organiza los elementos hijos en una columna, colocándolos uno debajo del otro en lugar de en una fila. */
+    align-items: center; /* Centra horizontalmente los elementos hijos dentro del contenedor, alineándolos en el centro de la columna. */
+    gap: 32px; /* Establece un espacio de 32 píxeles entre cada elemento hijo, creando un espacio uniforme entre los enlaces. */
+}
+.presentacion_link {
+    width: 50%; /* Establece un ancho fijo de 378 píxeles para el enlace, controlando su tamaño horizontal. */
+    text-align: center; /* Centra horizontalmente el texto dentro del enlace. */
+    padding: 21.5px 0; /* Añade un relleno (padding) de 21.5 píxeles en la parte superior e inferior, proporcionando espacio vertical interno dentro del enlace. */
+    border-radius: 8px; /* Aplica bordes redondeados de 8 píxeles al enlace, suavizando las esquinas. */
+    font-family: var(--Montserrat); /* Define la fuente del texto como "Montserrat", una fuente sans-serif moderna y legible. */
+    font-size: 24px; /* Establece el tamaño de la fuente en 24 píxeles, haciendo que el texto sea fácilmente legible y destacado. */
+    font-weight: 600; /* Configura el grosor de la fuente en 600, lo que hace que el texto sea más audaz que el peso normal (400), pero no tan grueso como el texto en negrita completa. */
+    text-decoration: none; /* Elimina cualquier decoración de texto predeterminada, como el subrayado, para darle un aspecto más limpio al enlace. */
+    color: var(--blanco); /* Establece el color del texto en un tono claro (#F6F6F6), que contrasta bien con un fondo oscuro. */
+    border: 2px solid var(--celeste); /* Aplica un borde sólido de 2 píxeles de ancho con un color azul (#22D4FD), que enmarca el enlace y le da un aspecto definido. */
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+.presentacion_link:hover{
+    background-color: var(--negro);
+    padding: 4%;
+    border: 2px solid var(--azul);
+}
+
+.presentacion_enlace_subtitulo {
+    font-family: var(--Krona); /* Define la fuente del subtítulo como "Krona One", una fuente sans-serif que da un aspecto moderno y estilizado al texto. */
+    font-size: 24px; /* Establece el tamaño de la fuente en 24 píxeles, haciendo que el subtítulo sea lo suficientemente grande como para destacar, pero sin ser abrumador. */
+    font-weight: 400; /* Define el grosor del texto en un peso normal (400), lo que significa que el subtítulo no estará en negrita, sino en un estilo de texto estándar. */
+}
+.footer{
+    background-color: var(--celeste);
+    padding: 24px;
+    color: #000000;
+    text-align: center;
+    font-family: var(--Montserrat);
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.imagen{
+    width: 50%;
+}
+@media(max-width: 1200px){
+    .header{
+        padding: 10%;
+    }
+    .header_menu{
+        justify-content: center;
+    }
+    .presentacion{
+        flex-direction: column-reverse;
+        padding: 5%;
+    }
+    .presentacion_contenido{
+        width: auto;
+    }
+}
